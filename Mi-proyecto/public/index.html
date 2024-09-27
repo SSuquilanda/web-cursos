@@ -1,49 +1,68 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Gestión de Cursos</title>
-        <link rel="stylesheet" href="styles.css">
-    </head>
-    <body>
-        <header>
-            <h1> Gestion de Cursos </h1>
-            <nav>
-                <ul>
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#cursos">Cursos</a></li>
-                    <li><a href="#agregar-curso">Agregar Curso</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Cursos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de Cursos</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#cursos">Cursos</a></li>
+                <li><a href="#agregar-curso">Agregar Curso</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-                </ul>
+    <main>
+        <section id="inicio">
+            <h2>Bienvenido a la plataforma de gestión de cursos</h2>
+            <p>Administra tus cursos de manera fácil y eficiente.</p>
+        </section>
 
-            </nav>
+        <section id="cursos">
+            <h2>Cursos Disponibles</h2>
+            <div id="lista-cursos"></div>
+        </section>
 
-        </header>
-        <main>
-            <section id="cursos" class="section-content">
-                <h2> Cursos disponibles</h2>
-                    <p>Aqui puedes gestionar los cursos disponibles</p>
+        <section id="agregar-curso">
+            <h2>Agregar Nuevo Curso</h2>
+            <form id="formulario-curso">
+                <label for="nombre">Nombre del Curso:</label>
+                <input type="text" id="nombre" required>
+                
+                <label for="instructor">Nombre del Instructor:</label>
+                <input type="text" id="instructor" required>
+                
+                <label for="fecha">Fecha de Inicio:</label>
+                <input type="date" id="fecha" required>
+                
+                <label for="duracion">Duración (semanas):</label>
+                <input type="number" id="duracion" required>
+                
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" required></textarea>
+                
+                <button type="submit">Agregar Curso</button>
+            </form>
+        </section>
 
-            </section>
-            <section id="agregar-curso" class="section-content">
-                <h2>Agregar Nuevo Curso</h2>
-                <form>
-                    <label for="nombre-curso">Nombre del curso:</label>
-                    <input type="text" id="nombre-curso" name="nombre-curso" required>
-                    <label for="descripcion-curso">Descripción:</label>
-                    <textarea id="descripcion-curso" name="descripcion-curso" required></textarea>
-                    <button type="submit">Agregar Curso</button>
-                </form>
-            </section>
-    
-            <section id="contacto" class="section-content">
-                <h2>Contacto</h2>
-                <p>Datos personales y forma de contacto.</p>
-            </section>
-        </main>
-        
-    </body>
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Nombre: Samantha Suquilanda</p>
+            <p>Email: ssuquilanda200412@gmail.com/p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Gestión de Cursos</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
