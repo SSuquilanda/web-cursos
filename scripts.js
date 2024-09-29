@@ -5,19 +5,22 @@ let cursos = JSON.parse(localStorage.getItem('cursos')) || [];
 const listaCursos = document.getElementById('lista-cursos');
 const formCurso = document.getElementById('form-curso');
 
-// Función para mostrar los cursos
+// Función para mostrar los cursos en recuadros
 function mostrarCursos() {
   listaCursos.innerHTML = '';  // Limpiar lista
 
   cursos.forEach((curso, index) => {
-    const li = document.createElement('li');
-    li.innerHTML = `
-      <strong>${curso.nombre}</strong> - Instructor: ${curso.instructor} <br>
-      Fecha de inicio: ${curso.fecha} - Duración: ${curso.duracion} semanas <br>
+    const div = document.createElement('div');
+    div.classList.add('course-card');
+    div.innerHTML = `
+      <h3>${curso.nombre}</h3>
+      <p><strong>Instructor:</strong> ${curso.instructor}</p>
+      <p><strong>Fecha de inicio:</strong> ${curso.fecha}</p>
+      <p><strong>Duración:</strong> ${curso.duracion} semanas</p>
       <button onclick="mostrarDetalles(${index})">Ver más detalles</button>
       <p class="descripcion" id="descripcion-${index}" style="display: none;">${curso.descripcion}</p>
     `;
-    listaCursos.appendChild(li);
+    listaCursos.appendChild(div);
   });
 }
 
@@ -31,7 +34,7 @@ function mostrarDetalles(index) {
   }
 }
 
-// Evento para agregar un curso
+// Aqui se para agrega un curso
 formCurso.addEventListener('submit', function (event) {
   event.preventDefault();
 
@@ -48,7 +51,7 @@ formCurso.addEventListener('submit', function (event) {
 
   mostrarCursos();  // Actualizar lista de cursos
 
-  // Limpiar el formulario
+  // Limpiar el formulario al terminar de llenar
   formCurso.reset();
 });
 
