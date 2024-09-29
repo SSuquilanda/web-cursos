@@ -45,23 +45,48 @@ main {
   padding: 2rem;
 }
 
+/* Solo el título inicial centrado */
+.inicio-content {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.titulo-centrado {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #007bff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+
+/* Diseño en paralelo para el resto */
 .section-content {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   margin-bottom: 2rem;
 }
 
 .section-content img {
   width: 40%;
   height: auto;
-  margin-right: 2rem;
   border-radius: 8px;
+}
+
+/* Ajustar para que la parte de texto esté más centrada */
+.section-content div {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: left;
 }
 
 h2 {
   margin-bottom: 1rem;
 }
 
+/* Formularios y estilo de agregar cursos */
 form {
   display: flex;
   flex-direction: column;
@@ -92,9 +117,11 @@ form button:hover {
   transition: background-color 0.3s;
 }
 
+/* Alinear mejor las tarjetas de cursos */
 .course-container {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center; /* Alinea las tarjetas al centro */
   gap: 20px;
 }
 
