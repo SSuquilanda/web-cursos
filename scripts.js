@@ -18,6 +18,7 @@ function mostrarCursos() {
       <p><strong>Fecha de inicio:</strong> ${curso.fecha}</p>
       <p><strong>Duración:</strong> ${curso.duracion} semanas</p>
       <button onclick="mostrarDetalles(${index})">Ver más detalles</button>
+      <button onclick="eliminarCurso(${index})">Eliminar Curso</button>
       <p class="descripcion" id="descripcion-${index}" style="display: none;">${curso.descripcion}</p>
     `;
     listaCursos.appendChild(div);
@@ -34,7 +35,14 @@ function mostrarDetalles(index) {
   }
 }
 
-// Aqui se para agrega un curso
+// Función para eliminar un curso
+function eliminarCurso(index) {
+  cursos.splice(index, 1);  // Eliminar curso de la lista
+  localStorage.setItem('cursos', JSON.stringify(cursos));  // Actualizar localStorage
+  mostrarCursos();  // Actualizar lista visual
+}
+
+// Evento para agregar un curso
 formCurso.addEventListener('submit', function (event) {
   event.preventDefault();
 
@@ -51,7 +59,7 @@ formCurso.addEventListener('submit', function (event) {
 
   mostrarCursos();  // Actualizar lista de cursos
 
-  // Limpiar el formulario al terminar de llenar
+  // Limpiar el formulario
   formCurso.reset();
 });
 

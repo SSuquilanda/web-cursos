@@ -122,6 +122,7 @@ form button:hover {
   padding: 5px 10px;
   border-radius: 5px;
   cursor: pointer;
+  margin-right: 5px;
 }
 
 .course-card button:hover {
