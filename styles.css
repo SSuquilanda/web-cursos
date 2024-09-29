@@ -6,20 +6,23 @@
 
 body {
   font-family: Arial, sans-serif;
-  line-height: 1.6;
 }
 
 header {
-  background: #333;
-  color: white;
-  padding: 10px 0;
+  background-color: #333;
+  padding: 1rem;
   text-align: center;
 }
 
+header h1 {
+  color: white;
+}
+
 nav ul {
+  list-style: none;
   display: flex;
   justify-content: center;
-  list-style-type: none;
+  background-color: #444;
 }
 
 nav ul li {
@@ -29,43 +32,69 @@ nav ul li {
 nav ul li a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
+  padding: 10px 15px;
+  display: block;
 }
 
 nav ul li a:hover {
-  color: #f39c12;
-  transition: color 0.3s ease;
+  background-color: #555;
+  transition: background-color 0.3s;
 }
 
 main {
-  padding: 20px;
-  max-width: 900px;
-  margin: 0 auto;
+  padding: 2rem;
 }
 
-#cursos, #agregar-curso, #contacto {
-  margin-bottom: 40px;
+.section-content {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
 }
 
-button {
-  background-color: #333;
-  color: white;
+.section-content img {
+  width: 40%;
+  height: auto;
+  margin-right: 2rem;
+  border-radius: 8px;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form label {
+  margin: 10px 0 5px;
+}
+
+form input, form textarea {
   padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #f39c12;
-  transition: background-color 0.3s ease;
+form button:hover {
+  background-color: #218838;
+  transition: background-color 0.3s;
 }
 
 footer {
-  background: #333;
-  color: white;
   text-align: center;
-  padding: 10px 0;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
+  padding: 1rem;
+  background-color: #333;
+  color: white;
 }

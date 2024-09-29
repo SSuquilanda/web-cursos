@@ -1,68 +1,90 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestión de Cursos</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestión de Cursos</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Gestión de Cursos</h1>
-        <nav>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#cursos">Cursos</a></li>
-                <li><a href="#agregar-curso">Agregar Curso</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1>Gestión de Cursos</h1>
+    <nav>
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#cursos">Cursos</a></li>
+        <li><a href="#agregar-curso">Agregar Curso</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        <section id="inicio">
-            <h2>Bienvenido a la plataforma de gestión de cursos</h2>
-            <p>Administra tus cursos de manera fácil y eficiente.</p>
-        </section>
+  <main>
+    <!-- Sección Inicio -->
+    <section id="inicio">
+      <div class="section-content">
+        <img src="contacto.jpeg" alt="Inicio">
+        <div>
+          <h2>Bienvenidos a la Plataforma de Gestión de Cursos</h2>
+          <p>Aquí puedes gestionar, agregar y explorar cursos fácilmente.</p>
+        </div>
+      </div>
+    </section>
 
-        <section id="cursos">
-            <h2>Cursos Disponibles</h2>
-            <div id="lista-cursos"></div>
-        </section>
+    <!-- Sección Cursos -->
+    <section id="cursos">
+      <div class="section-content">
+        <img src="cursos.jpg" alt="Cursos">
+        <div>
+          <h2>Lista de Cursos</h2>
+          <ul id="lista-cursos">
+            <!-- Aquí se mostrarán los cursos dinámicamente -->
+          </ul>
+        </div>
+      </div>
+    </section>
 
-        <section id="agregar-curso">
-            <h2>Agregar Nuevo Curso</h2>
-            <form id="formulario-curso">
-                <label for="nombre">Nombre del Curso:</label>
-                <input type="text" id="nombre" required>
-                
-                <label for="instructor">Nombre del Instructor:</label>
-                <input type="text" id="instructor" required>
-                
-                <label for="fecha">Fecha de Inicio:</label>
-                <input type="date" id="fecha" required>
-                
-                <label for="duracion">Duración (semanas):</label>
-                <input type="number" id="duracion" required>
-                
-                <label for="descripcion">Descripción:</label>
-                <textarea id="descripcion" required></textarea>
-                
-                <button type="submit">Agregar Curso</button>
-            </form>
-        </section>
+    <!-- Sección Agregar Curso -->
+    <section id="agregar-curso">
+      <div class="section-content">
+        <img src="agregar_curso.jpg" alt="Agregar Curso">
+        <div>
+          <h2>Agregar un Nuevo Curso</h2>
+          <form id="form-curso">
+            <label for="nombre">Nombre del Curso:</label>
+            <input type="text" id="nombre" required>
+            <label for="instructor">Instructor:</label>
+            <input type="text" id="instructor" required>
+            <label for="fecha">Fecha de Inicio:</label>
+            <input type="date" id="fecha" required>
+            <label for="duracion">Duración (en semanas):</label>
+            <input type="number" id="duracion" required>
+            <label for="descripcion">Descripción:</label>
+            <textarea id="descripcion" required></textarea>
+            <button type="submit">Agregar Curso</button>
+          </form>
+        </div>
+      </div>
+    </section>
 
-        <section id="contacto">
-            <h2>Contacto</h2>
-            <p>Nombre: Samantha Suquilanda</p>
-            <p>Email: ssuquilanda200412@gmail.com/p>
-        </section>
-    </main>
+    <!-- Sección Contacto -->
+    <section id="contacto">
+      <div class="section-content">
+        <img src="contacto.jpg" alt="Contacto">
+        <div>
+          <h2>Contacto</h2>
+          <p>Nombre: Samantha Micaela Suquilanda Quilli</p>
+          <p>Email: ssuquilanda200412@gmail.com</p>
+          <p>Teléfono: 096 7056 288</p>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <footer>
-        <p>&copy; 2024 Gestión de Cursos</p>
-    </footer>
+  <footer>
+    <p>&copy; 2024 Gestión de Cursos</p>
+  </footer>
 
-    <script src="script.js"></script>
+  <script src="scripts.js"></script>
 </body>
 </html>
